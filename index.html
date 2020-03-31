@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Hang-Man</title>
+</head>
+<body>
+    <div id="entrance">
+        <div class="man-name">
+            <h3>Enter Name</h3>
+            <input id="player_name" type="text">
+        </div>
+        <button id="play" onclick="start()">Play</button>
+    </div>
+    
+    
+    <main id="main">
+        
+        <div class="hang-man">
+            <div class="r-leg"></div>
+            <div class="l-leg"></div>
+            <div class="r-arm"></div>
+            <div class="l-arm"></div>
+            <div class="body"></div>
+            <div class="head"></div>
+            <div class="pole2"></div>
+            <div class="pole1"></div>
+            <div class="pole"></div>
+            <div class="floor"></div>
+        </div>
+        <div class="questions">
+            <h2 id="pl_name">Unknown</h2>
+            <h3 id="question">?</h3>
+            <form class="ques-container">
+                <div>
+                    <input type="radio" name="a" id="qa"  value="qa">
+                    <label id="a" for="qa"></label>
+                </div>
+                <div>
+                    <input type="radio" name="a" id="qb" value="qb">
+                    <label id="b"  for="qb"></label>
+                </div>
+                <div>
+                    <input type="radio" name="a" id="qc"  value="qc">
+                    <label id="c" for="qc"></label>
+                </div>
+                <button class="submit-btn" onclick="submitAnswer(); return false">Submit</button>
+            </form>
+            <p id="dead"></p>
+        </div>
+        
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
